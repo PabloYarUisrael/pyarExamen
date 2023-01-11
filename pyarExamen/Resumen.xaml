@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="Resumen"
+             x:Class="pyarExamen.Resumen">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label x:Name="lblUsuario" HorizontalTextAlignment ="End" FontSize="16"/>
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <Label Text="Nombre" FontSize="20" Grid.Row="0" Grid.Column="0"/>
+                <Label Text="Total" FontSize="20" Grid.Row="1" Grid.Column="0"/>                
+
+                <Entry x:Name="txtNombre" Placeholder="Ingrese el Nombre"  Grid.Row="0" Grid.Column="1" />
+                <Entry x:Name="txtTotal" Keyboard="Numeric" Placeholder="Ingrese el Monto Inicial"  Grid.Row="1" Grid.Column="1" />
+                
+            </Grid>
+
+            <Button x:Name="btnAcercaDe" Text="Acerca de:" Clicked="btnAcercaDe_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

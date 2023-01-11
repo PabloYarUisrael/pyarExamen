@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="Registro"
+             x:Class="pyarExamen.Registro">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label x:Name="lblUsuario" HorizontalTextAlignment ="End" FontSize="16"/>
+
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <Label Text="Nombre" FontSize="20" Grid.Row="0" Grid.Column="0"/>
+                <Label Text="Monto Inicial" FontSize="20" Grid.Row="1" Grid.Column="0"/>
+                <Label Text="Pago Mensual" FontSize="20" Grid.Row="2" Grid.Column="0"/>
+                
+                <Entry x:Name="txtNombre" Placeholder="Ingrese el Nombre"  Grid.Row="0" Grid.Column="1" />
+                <Entry x:Name="txtMontoInicial" Keyboard="Numeric" Placeholder="Ingrese el Monto Inicial"  Grid.Row="1" Grid.Column="1" />
+                <Entry x:Name="txtPagoMensual"  Keyboard="Numeric" Placeholder="Ingrese el Pago Mensual" Grid.Row="2" Grid.Column="1" />
+            </Grid>
+
+            <Button x:Name="btnCalcular" Text="Calcular Pago Mensual" Clicked="btnCalcular_Clicked" />
+            <Button x:Name="btnGuardar" Text="Guardar" Clicked="btnGuardar_Clicked"  />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
